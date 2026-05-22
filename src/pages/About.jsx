@@ -1,28 +1,16 @@
+import { useLanguage } from '../i18n/LanguageContext'
 import './About.css'
 
-const values = [
-  {
-    title: 'სისუფთავე',
-    text: 'სუფთა გარემო, ყოველ დღე',
-  },
-  {
-    title: 'პროფესიონალიზმი',
-    text: 'კვალიფიციური ტრენერები, ინდივიდუალური მიდგომა',
-  },
-  {
-    title: 'საზოგადოება',
-    text: 'ქართველი და უცხოელი წევრები — ერთი გუნდი',
-  },
-]
-
 function About() {
+  const { t } = useLanguage()
+
   return (
     <div className="page about-page">
       <section className="page-hero page-hero--compact">
         <div className="page-hero__inner">
           <div className="page-hero__content">
             <h1>
-              2018 წლიდან. <span className="accent-text">ვაკეში</span>. ჩვენთვის.
+              {t.about.heroPrefix} <span className="accent-text">{t.about.heroAccent}</span>. {t.about.heroSuffix}
             </h1>
           </div>
         </div>
@@ -31,22 +19,16 @@ function About() {
       <section className="section">
         <div className="container split">
           <div>
-            <h2 className="section-title">ვინ ვართ ჩვენ</h2>
+            <h2 className="section-title">{t.about.storyTitle}</h2>
             <div className="about-story">
-              <p>
-                Underground Gym 2018 წელს დაარსდა — სივრცე, სადაც სერიოზული
-                ვარჯიში ხდება ყოველ დღე. ჩვენ ვართ კომპაქტური, პრაქტიკული,
-                მეგობრული გარემო ვაკის გულში.
-              </p>
-              <p>
-                ჩვენი გუნდი — პროფესიონალი ტრენერები, რომლებიც მზად არიან
-                დაგეხმარონ — დამწყებ სტუდენტიდან გამოცდილ სპორტსმენამდე.
-              </p>
+              {t.about.storyParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
           </div>
-          <div className="placeholder-box placeholder-box--about-team" aria-label="გუნდის ფოტო">
+          <div className="placeholder-box placeholder-box--about-team" aria-label={t.about.teamImageAria}>
             <div className="placeholder-box__content">
-              <span className="placeholder-box__label">გუნდი</span>
+              <span className="placeholder-box__label">{t.about.teamImageLabel}</span>
             </div>
           </div>
         </div>
@@ -54,9 +36,9 @@ function About() {
 
       <section className="section section--surface">
         <div className="container">
-          <h2 className="section-title">ჩვენი ღირებულებები</h2>
+          <h2 className="section-title">{t.about.valuesTitle}</h2>
           <div className="grid grid--3">
-            {values.map((value) => (
+            {t.about.values.map((value) => (
               <article className="about-value card" key={value.title}>
                 <h3>{value.title}</h3>
                 <p>{value.text}</p>
@@ -69,13 +51,9 @@ function About() {
       <section className="section about-note-section">
         <div className="container">
           <div className="about-note">
-            <p>
-              ჩვენი დარბაზი ცნობილია მეგობრული ატმოსფეროთი. სტუმრები ხშირად
-              აღნიშნავენ, რომ სწრაფად გრძნობენ თავს "ადგილობრივად". ვარჯიში
-              ხმამაღალ მუსიკასა და გულწრფელ მხარდაჭერას შორის.
-            </p>
+            <p>{t.about.atmosphere}</p>
             <p className="about-languages">
-              ჩვენ ვსაუბრობთ ქართულად, ინგლისურად და რუსულად.
+              {t.about.languages}
             </p>
           </div>
         </div>

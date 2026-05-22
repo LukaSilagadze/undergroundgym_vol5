@@ -1,33 +1,16 @@
+import { useLanguage } from '../i18n/LanguageContext'
 import './Pricing.css'
 
-const plans = [
-  {
-    name: '2 კვირა',
-    price: '70 ₾',
-  },
-  {
-    name: '1 თვე',
-    price: '120 ₾',
-    featured: true,
-  },
-  {
-    name: '3 თვე',
-    price: '300 ₾',
-  },
-  {
-    name: '1 წელი',
-    price: '1080 ₾',
-  },
-]
-
 function Pricing() {
+  const { t } = useLanguage()
+
   return (
     <div className="page pricing-page">
       <section className="page-hero page-hero--compact">
         <div className="page-hero__inner">
           <div className="page-hero__content">
             <h1>
-              გახდი <span className="accent-text">წევრი</span>.
+              {t.pricing.heroPrefix} <span className="accent-text">{t.pricing.heroAccent}</span>.
             </h1>
           </div>
         </div>
@@ -36,17 +19,18 @@ function Pricing() {
       <section className="section">
         <div className="container">
           <div className="pricing-grid">
-            {plans.map((plan) => (
+            {t.pricing.plans.map((plan) => (
               <article
                 className={`pricing-card card${plan.featured ? ' pricing-card--featured' : ''}`}
                 key={plan.name}
               >
-                {plan.featured && <span className="pricing-card__badge">ხშირი არჩევანი</span>}
+                {plan.featured && <span className="pricing-card__badge">{t.pricing.featured}</span>}
                 <h2>{plan.name}</h2>
                 <p className="pricing-card__price">{plan.price}</p>
                 <ul>
-                  <li>ულიმიტო წვდომა</li>
-                  <li>ყველა სერვისი</li>
+                  {t.pricing.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
                 </ul>
               </article>
             ))}
@@ -54,11 +38,10 @@ function Pricing() {
 
           <div className="pricing-notes">
             <p>
-              დღიური ბილეთისა და პირადი ტრენინგის ფასის გასაგებად დაგვიკავშირდით
-              პირდაპირ.
+              {t.pricing.note}
             </p>
             <p>
-              <strong>მიღება:</strong> ნაღდი და უნაღდო გადახდა
+              <strong>{t.pricing.paymentLabel}</strong> {t.pricing.paymentText}
             </p>
           </div>
         </div>
