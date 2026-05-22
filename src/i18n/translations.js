@@ -170,6 +170,9 @@ export const translations = {
       directionsTitle: 'როგორ მოვიდე?',
       directions:
         'სპორტდარბაზი მდებარეობს სავარაუდოდ საცხოვრებელ კორპუსთან ახლოს. თუ ვერ პოულობთ — დარეკეთ და მოგვახსენეთ, სად ხართ. მოვა ვინმე.',
+      videoPlaceholderTitle: 'მისასვლელი ვიდეო',
+      videoPlaceholderText: 'ნახე მისასვლელი გზა ვიდეოში',
+      videoPlaceholderNote: 'თუ პირველად მოდიხარ, ვიდეო დაგეხმარება ზუსტად იპოვო შესასვლელი.',
     },
   },
   en: {
@@ -336,6 +339,9 @@ export const translations = {
       directionsTitle: 'How to find us',
       directions:
         'The gym is likely located near a residential building. If you cannot find it, call us and tell us where you are. Someone will come out.',
+      videoPlaceholderTitle: 'Directions video',
+      videoPlaceholderText: 'Watch the route in the video',
+      videoPlaceholderNote: 'If this is your first visit, the video will help you find the entrance precisely.',
     },
   },
   ru: {
@@ -502,6 +508,9 @@ export const translations = {
       directionsTitle: 'Как нас найти',
       directions:
         'Зал, вероятно, находится рядом с жилым корпусом. Если не можете найти вход, позвоните и скажите, где вы находитесь. Кто-нибудь выйдет.',
+      videoPlaceholderTitle: 'Видео с маршрутом',
+      videoPlaceholderText: 'Посмотрите маршрут на видео',
+      videoPlaceholderNote: 'Если вы идете впервые, видео поможет точно найти вход.',
     },
   },
 }

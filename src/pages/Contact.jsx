@@ -70,11 +70,33 @@ function Contact() {
 
       <section className="section section--surface contact-directions-section">
         <div className="container">
-          <div className="contact-directions">
-            <h2>{t.contact.directionsTitle}</h2>
-            <p>
-              {t.contact.directions}
-            </p>
+          <div className="contact-directions-panel">
+            <div className="contact-directions-panel__copy">
+              <span className="contact-directions-panel__eyebrow">
+                {t.contact.videoPlaceholderTitle}
+              </span>
+              <h2>{t.contact.directionsTitle}</h2>
+              <p>{t.contact.directions}</p>
+              <div className="contact-directions-panel__note">
+                <strong>{t.contact.videoPlaceholderText}</strong>
+                <span>{t.contact.videoPlaceholderNote}</span>
+              </div>
+            </div>
+
+            <div className="contact-video-frame" aria-label={t.contact.videoPlaceholderTitle}>
+              <div className="contact-video-frame__inner">
+                <iframe
+                  title={t.contact.videoPlaceholderTitle}
+                  src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2654644731558380%2F&show_text=false&width=380&t=0"
+                  width="380"
+                  height="476"
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
