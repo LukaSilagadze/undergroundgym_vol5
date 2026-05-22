@@ -3,6 +3,7 @@ import './Footer.css'
 
 const instagramUrl = 'https://www.instagram.com/undergroundgym28?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
 const facebookUrl = 'https://www.facebook.com/UndegroundGym'
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
 
 function Footer() {
   const { t } = useLanguage()
@@ -12,7 +13,7 @@ function Footer() {
       <div className="footer__inner">
         <div>
           <div className="footer__brand">
-            <img src="/logo.png" alt={t.common.logoAlt} className="brand-logo" />
+            <img src={assetUrl('logo.png')} alt={t.common.logoAlt} className="brand-logo" />
             <span>{t.common.brand}</span>
           </div>
           <p className="footer__address">{t.footer.address}</p>

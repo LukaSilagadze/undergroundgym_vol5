@@ -1,7 +1,7 @@
 export const languageOptions = [
-  { code: 'ka', label: 'ქართული', shortLabel: 'KA', flagSrc: '/flags/ka.svg', htmlLang: 'ka' },
-  { code: 'en', label: 'English', shortLabel: 'EN', flagSrc: '/flags/en.svg', htmlLang: 'en' },
-  { code: 'ru', label: 'Русский', shortLabel: 'RU', flagSrc: '/flags/ru.svg', htmlLang: 'ru' },
+  { code: 'ka', label: 'ქართული', shortLabel: 'KA', flagSrc: 'flags/ka.svg', htmlLang: 'ka' },
+  { code: 'en', label: 'English', shortLabel: 'EN', flagSrc: 'flags/en.svg', htmlLang: 'en' },
+  { code: 'ru', label: 'Русский', shortLabel: 'RU', flagSrc: 'flags/ru.svg', htmlLang: 'ru' },
 ]
 
 export const translations = {

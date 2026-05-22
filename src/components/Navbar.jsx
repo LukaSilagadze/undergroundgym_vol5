@@ -13,6 +13,7 @@ const links = [
 
 const instagramUrl = 'https://www.instagram.com/undergroundgym28?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
 const facebookUrl = 'https://www.facebook.com/UndegroundGym'
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
 
 function ClockIcon() {
   return (
@@ -57,7 +58,7 @@ function Navbar() {
       <div className="navbar__top">
         <div className="navbar__top-inner">
           <NavLink to="/" className="navbar__brand" aria-label={t.nav.brandAria}>
-            <img src="/logo.png" alt={t.common.logoAlt} className="brand-logo" />
+            <img src={assetUrl('logo.png')} alt={t.common.logoAlt} className="brand-logo" />
             <span>{t.common.brand}</span>
           </NavLink>
 
@@ -145,7 +146,7 @@ function Navbar() {
               >
                 <img
                   className="navbar__language-flag"
-                  src={activeLanguage.flagSrc}
+                  src={assetUrl(activeLanguage.flagSrc)}
                   alt=""
                   aria-hidden="true"
                 />
@@ -169,7 +170,7 @@ function Navbar() {
                     >
                       <img
                         className="navbar__language-flag"
-                        src={item.flagSrc}
+                        src={assetUrl(item.flagSrc)}
                         alt=""
                         aria-hidden="true"
                       />
