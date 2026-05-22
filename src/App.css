@@ -20,7 +20,7 @@ main {
 }
 
 .page-hero {
-  padding: 70px 24px 56px;
+  padding: 100px 24px;
   background:
     linear-gradient(90deg, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.74) 48%, rgba(10, 10, 10, 0.58)),
     linear-gradient(135deg, rgba(245, 197, 24, 0.1), transparent 34%),
