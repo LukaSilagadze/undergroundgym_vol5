@@ -41,6 +41,24 @@ function PhoneIcon() {
   )
 }
 
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14.1 8.5h2V5.3c-.4-.1-1.7-.2-3.1-.2-3 0-5 1.8-5 5v2.8H4.7v3.6H8V24h4v-7.5h3.2l.5-3.6H12v-2.4c0-1.1.3-2 2.1-2Z" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="4" y="4" width="16" height="16" rx="5" />
+      <circle cx="12" cy="12" r="3.5" />
+      <circle cx="16.8" cy="7.2" r="1" />
+    </svg>
+  )
+}
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isLanguageOpen, setIsLanguageOpen] = useState(false)
@@ -132,8 +150,18 @@ function Navbar() {
 
           <div className="navbar__right-tools">
             <div className="navbar__socials" aria-label={t.nav.socialsAria}>
-              <a href={facebookUrl} target="_blank" rel="noreferrer">{t.common.social.facebook}</a>
-              <a href={instagramUrl} target="_blank" rel="noreferrer">{t.common.social.instagram}</a>
+              <a href={facebookUrl} target="_blank" rel="noreferrer" aria-label={t.common.social.facebook}>
+                <span className="navbar__social-label">{t.common.social.facebook}</span>
+                <span className="navbar__social-icon">
+                  <FacebookIcon />
+                </span>
+              </a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer" aria-label={t.common.social.instagram}>
+                <span className="navbar__social-label">{t.common.social.instagram}</span>
+                <span className="navbar__social-icon">
+                  <InstagramIcon />
+                </span>
+              </a>
             </div>
             <div className="navbar__language">
               <button
